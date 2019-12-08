@@ -5,6 +5,6 @@ feature 'registration' do
   fill_in 'password', with: 'its-a-secret'
   click_button 'Submit'
 
-  expect(page).to have_content "Welcome, test@bla.com"
+  expect(page).to have_content "Welcome"
   end
 end

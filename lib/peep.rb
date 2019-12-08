@@ -1,7 +1,7 @@
 require 'pg'
 class Peep
 
-  attr_reader :id, :message, :handle
+  attr_reader :id, :message, :handle, :time
 
   def initialize(id:, message:, handle:, time:)
     @id = id

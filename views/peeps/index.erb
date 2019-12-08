@@ -1,8 +1,4 @@
-
-<% if @user %>
-  <h2>Welcome, <%= @user.email %></h2>
-<% end %>
-
+<h2> Welcome </h2>
 <ul>
   <% @peeps.each do |peep| %>
     <li><%= peep.message %> <%= peep.handle %></li>

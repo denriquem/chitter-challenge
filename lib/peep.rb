@@ -7,7 +7,7 @@ class Peep
     @id = id
     @message = message
     @handle = handle
-    @time = Time.now
+    @time = time
   end
 
   def self.post(message:, handle:, time:)
@@ -17,7 +17,7 @@ class Peep
       connection = PG.connect(dbname: 'chitter')
     end
     result = connection.exec "INSERT INTO peeps (message, handle) VALUES ('#{message}','#{handle}') RETURNING id, message, handle, time"
-     Peep.new(id: result[0]['id'], message: result[0]['message'], handle: result[0]['@me'], time: result[0][Time.now])
+     Peep.new(id: result[0]['id'], message: result[0]['message'], handle: result[0]['@me'], time: result[0]['time'])
   end
 
   def self.all

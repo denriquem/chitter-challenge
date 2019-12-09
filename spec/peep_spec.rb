@@ -1,6 +1,6 @@
 require 'peep'
 require 'pg'
-require 'setup_test_database'
+
 
 describe Peep do
 

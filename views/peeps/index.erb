@@ -1,6 +1,6 @@
 <h2> Welcome </h2>
 <ul>
-  <% @peeps.each do |peep| %>
-    <li><%= peep.message %> <%= peep.handle %></li>
+  <% @peeps.reverse.each do |peep| %>
+    <li><%= peep.message %> <%= peep.handle %> <%= peep.time.slice(11..15) %></li>
   <% end %>
 </ul>
